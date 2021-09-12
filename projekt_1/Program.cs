@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 
 namespace projekt_1
 {
@@ -8,61 +7,19 @@ namespace projekt_1
         static void Main()
         {
 
-            Console.WriteLine("Введи первое число: ");
-            float a = float.Parse(Console.ReadLine());
+            
+            //object name = "Andrey";					// storing a string in an object
+            object age = 36;                        // storing an int in an object
 
-            Console.WriteLine("Введи второе число: ");
-            float b = float.Parse(Console.ReadLine());
+            var age1 = (int)age;
+            Console.WriteLine(age1);
 
-            Console.WriteLine("+ - *  / % ^");
-            string c = Console.ReadLine();
-
-            if (c == "+")
-            {
-                float colv = a + b;
-                Console.WriteLine(colv);
-            }
-
-            else if (c == "-")
-            {
-                float colv = a - b;
-                Console.WriteLine(colv);
-            }
-
-            else if (c == "*")
-            {
-                float colv = a * b;
-                Console.WriteLine(colv);
-            }
-
-            else if (c == "/")
-            {
-                float colv = a / b;
-                Console.WriteLine(colv);
-            }
-
-            else if (c == "%")
-            {
-                float colv1 = a / b;
-                float q = (int)colv1;
-                float colv = colv1 - q;
-                Console.WriteLine(colv);
-            }
-
-            else if (c == "^")
-            {
-
-                float colv = 1;
-                for (int i = 0; i < b; i++)
-                colv *= a;
-                Console.WriteLine(colv);
-
-            }
-
-            else
-            {
-                Console.WriteLine("не то");
-            }
+                //		object height = 1.73;					// storing a double in an object
+                //		// int length1 = name.Length;				// gives compile error!
+                //		int age_1 = ((string)name).Length;	// cast to access members
+        
         }
+
     }
+
 }
